@@ -1,10 +1,12 @@
 * {
     margin: 0;
 }
+
 body {
     width: 100%;
     background: #FFFFFF;
 }
+
 .image-after-menu {
     width: 100%;
 }
@@ -73,13 +75,16 @@ body {
     border: none;
     cursor: pointer;
 }
+
 .enter-button:hover {
     background: rgba(255, 255, 255, 0.495);
 }
+
 .enter-button_text {
     font: normal 400 12px/14px 'Roboto';
     color: #F8F8F8;
 }
+
 .footer {
     display: flex;
     align-items: center;
@@ -87,7 +92,7 @@ body {
     background: rgba(35, 47, 56, 0.6);
     height: 89px;
     margin-top: -89px;
-	background: url("../Image/footer.png");
+	background: url("../Images/footer.png");
 	background-size: 100%;
 }
 
@@ -119,7 +124,7 @@ body {
 .nav-text:hover {
     border-bottom: 2px solid #a9a7a7;;
 }
-.header_main-background {
+.header-main-background {
     height: 360px;
     width: 100%;
 }
