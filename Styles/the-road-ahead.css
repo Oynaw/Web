@@ -7,6 +7,77 @@ body {
     background: #FFFFFF;
 }
 
+.header-main-background {
+    height: 360px;
+    width: 100%;
+}
+
+.header-menu {
+    padding-top: 17px;
+    padding-bottom: 17px;
+    height: 40px;
+    width: 65%;
+    margin: auto;
+    justify-content: space-around;
+}
+
+.header-logo {
+    display: inline;
+    float: left;
+    font: normal 400 26px/26px 'Lora';
+    text-decoration: none;
+    color: #2E2E2E;
+    
+}
+
+.header-navigation {
+    padding-top: 10px;
+    display: inline;
+    float: right;
+}
+
+.navigation-text {
+    
+    height: 20px;
+    font: normal 400 12px/20px 'Oxygen';
+    text-decoration: none;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    color: #2E2E2E;
+    background: transparent; 
+    padding: 10px 20px 15px 20px;
+    border-radius: 3px;
+    
+}
+.navigation-text:hover {
+    background: rgba(157, 156, 156, 0.259);
+    padding:  10px 20px 15px 20px;
+}
+
+.header-context {
+    margin-bottom: 20px;
+}
+
+.header-text_title {
+    font: normal 400 50px/51px 'Lora';
+    color: #2E2E2E;
+    text-align: center;
+    margin-top: 90px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.header-text_description {
+	font-family: Oxygen;
+	font-size: 17px;
+	font-weight: 400;
+	line-height: 20px;
+	text-align: center;
+    margin: 0;
+    margin-bottom: 31px;
+    color: rgba(46, 46, 46, 0.63);
+}
+
 .image-after-menu {
     width: 100%;
 }
@@ -32,15 +103,14 @@ body {
 }
 
 .section-box {
-    display: flex;
     justify-content: center;
 }
 
 .section-content {
-    margin-top: 140px;
-    margin-bottom: 135px;
-    display: flex;
-    flex-direction: column;
+    padding-top: 140px;
+    padding-bottom: 135px;
+    width: 67%;
+    margin: auto;
 	font-family: Oxygen;
 	font-size: 24px;
 	font-weight: 400;
@@ -50,64 +120,34 @@ body {
 	color: #101315;
 }
 
-.enter-window {
-    height: 48px;
-    width: 315px;
-    background: #FFFFFF;
-    border-radius: 3px 0px 0px 3px;
-    border: none;
-}
-
-.enter-window_text {
-    font: normal 400 12px/14px 'Roboto';
-    color: #817F83;
-    padding: 1px 30px;
-}
-
-.enter-button {
-    height: 50px;
-    width: 125px;
-    background: rgba(255, 255, 255, 0.28);
-    border-radius: 0px 3px 3px 0px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: none;
-    cursor: pointer;
-}
-
-.enter-button:hover {
-    background: rgba(255, 255, 255, 0.495);
-}
-
-.enter-button_text {
-    font: normal 400 12px/14px 'Roboto';
-    color: #F8F8F8;
-}
 
 .footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+    text-align: center;
     background: rgba(35, 47, 56, 0.6);
     height: 89px;
-    margin-top: -89px;
 	background: url("../Images/footer.png");
-	background-size: 100%;
+    background-position: center center;
+	object-fit: cover;
 }
 
+.footer-menu {
+    padding-top: 28px;
+    height: 34px;
+    width: 67%;
+    margin: auto;
+}
 
 .footer-logo {
+    display: inline;
+    float: left;
     font: normal 400 26px/26px 'Lora';
-    color: #FFFFFF;
     text-decoration: none;
+    color: #FFFFFF;
 }
 
 .footer-nav {
-    display: flex;
-    flex-wrap: nowrap;
-    flex-basis: 25%;
-    justify-content: flex-end;
+    display: inline;
+    float: right;
 }
 
 .nav-text {
@@ -123,71 +163,4 @@ body {
 
 .nav-text:hover {
     border-bottom: 2px solid #a9a7a7;;
-}
-.header-main-background {
-    height: 360px;
-    width: 100%;
-}
-
-.header-menu {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 20px;
-}
-
-.header-logo {
-    height: 26px;
-    font: normal 400 26px/26px 'Lora';
-    text-decoration: none;
-    color: #2E2E2E;
-}
-
-.header-navigation {
-    display: flex;
-    flex-wrap: nowrap;
-    flex-basis: 25%;
-    justify-content: space-between;
-}
-.navigation-text {
-    height: 20px;
-    font: normal 400 12px/20px 'Oxygen';
-    text-decoration: none;
-    letter-spacing: 0.6px;
-    text-transform: uppercase;
-    color: #2E2E2E;
-    background: transparent; 
-    padding: 10px 20px 15px 20px;
-    border-radius: 3px;
-    
-}
-.navigation-text:hover {
-    background: rgba(157, 156, 156, 0.259);
-    padding:  10px 20px 15px 20px;
-}
-
-.header-context {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.header-text_title {
-    font: normal 400 50px/51px 'Lora';
-    color: #2E2E2E;
-    margin-top: 90px;
-    margin-bottom: 20px;
-    letter-spacing: 2px;
-}
-
-.header-text_description {
-	font-family: Oxygen;
-	font-size: 17px;
-	font-weight: 400;
-	line-height: 20px;
-	text-align: center;
-    margin: 0;
-    margin-bottom: 31px;
-    color: rgba(46, 46, 46, 0.63);
 }
