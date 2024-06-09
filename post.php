@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>the-road-ahead</title>
+    <title>post</title>
     <meta charset="utf-8">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,12 +13,12 @@
 <body>
     <header class="header">
         <div class="header-menu">
-            <a class="header-logo" href="index.html">Escape.</a>
+            <a class="header-logo" href="home.php">Escape.</a>
             <nav class="header-navigation">
-                <a class="header-navigation-text" href="index.html">home</a>
-                <a class="header-navigation-text" href="index.html">categories</a>
-                <a class="header-navigation-text" href="index.html">about</a>
-                <a class="header-navigation-text" href="index.html">contact</a>
+                <a class="header-navigation-text" href="home.php">home</a>
+                <a class="header-navigation-text" href="home.php">categories</a>
+                <a class="header-navigation-text" href="home.php">about</a>
+                <a class="header-navigation-text" href="home.php">contact</a>
             </nav>
         </div>
         <div class="header-context">
@@ -87,12 +87,12 @@
     </div>
     <footer class="footer">
         <div class="footer-menu">
-            <a class="footer-logo" href="index.html">Escape.</a>
+            <a class="footer-logo" href="home.php">Escape.</a>
             <nav class="footer-navigation">
-                <a class="footer-navigation-text" href="index.html">home</a>
-                <a class="footer-navigation-text" href="index.html">categories</a>
-                <a class="footer-navigation-text" href="index.html">about</a>
-                <a class="footer-navigation-text" href="index.html">contact</a>
+                <a class="footer-navigation-text" href="home.php">home</a>
+                <a class="footer-navigation-text" href="home.php">categories</a>
+                <a class="footer-navigation-text" href="home.php">about</a>
+                <a class="footer-navigation-text" href="home.php">contact</a>
             </nav>
         </div>
     </footer>
