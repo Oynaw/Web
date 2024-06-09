@@ -5,6 +5,7 @@
 }
 
 .header-menu {
+    min-width: 400px;
     padding-top: 17px;
     padding-bottom: 17px;
     height: 40px;
@@ -110,15 +111,15 @@
 
 
 .footer {
-    text-align: center;
     background: rgba(35, 47, 56, 0.6);
     height: 89px;
-	background: url("../Images/footer.png");
+	background: url("../images/footer.png");
     background-position: center center;
-	object-fit: cover;
+    background-size: cover;
 }
 
 .footer-menu {
+    min-width: 400px;
     padding-top: 28px;
     height: 34px;
     width: 67%;
