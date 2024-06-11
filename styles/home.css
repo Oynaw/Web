@@ -115,14 +115,22 @@ body {
     border-radius: 0px;
 }
 
-.theme {
+.tag {
     width: 87px;
-    background: #DD783F;
+    height: 26px;
     border-radius: 2px;
     margin: 20px;
 }
 
-.theme_text {
+.tag-adventure {
+    background: #DD783F;
+}
+
+.tag-none {
+    opacity: 0;
+}
+
+.tag_text {
     font: normal 400 12px/13px 'Oxygen';
     text-transform: uppercase;
     display: flex;
@@ -131,9 +139,6 @@ body {
     padding: 6px;
 }
 
-.theme_hide{
-    background: transparent;
-}
 
 .section-cards {
     display: flex;
@@ -153,7 +158,7 @@ body {
 }
 
 .card {
-    
+    background-size: cover;
     height: 280px;
     width: 460px;
     margin: 10px;
@@ -203,6 +208,8 @@ body {
 
 .avatar {
     border-radius: 60px;
+    width: 26px;
+    height: 26px;
 }
 
 .card-data {
@@ -232,7 +239,6 @@ body {
 
 .box {
     background: #FFFFFF;
-    width: 170px;
     box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.09);
     border-radius: 3px;
     flex-basis: 26%;
@@ -255,7 +261,12 @@ body {
 
 .box-title {
     font: normal 400 16px/19px 'Lora';
+    text-decoration: none;
     color: #101315;
+}
+
+.box-title:hover {
+    text-decoration: underline;
 }
 
 /* sans-serif / serif  */
