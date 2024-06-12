@@ -38,12 +38,12 @@ function saveFile($file, $data) {
 
 
 function saveImage($imageBase64, $imageName): string {
-$imageName = str_replace(' ', '_', $imageName);
-$imageBase64Array = explode(';base64,', $imageBase64);
-$imgExtention = str_replace('data:image/', '', $imageBase64Array[0]);
-$imageDecoded = base64_decode($imageBase64Array[1]);
-saveFile("images/{$imageName}.{$imgExtention}", $imageDecoded);
-return "images/{$imageName}.{$imgExtention}";
+    $imageName = str_replace(' ', '_', $imageName);
+    $imageBase64Array = explode(';base64,', $imageBase64);
+    $imgExtention = str_replace('data:image/', '', $imageBase64Array[0]);
+    $imageDecoded = base64_decode($imageBase64Array[1]);
+    saveFile("images/{$imageName}.{$imgExtention}", $imageDecoded);
+    return "images/{$imageName}.{$imgExtention}";
 }
 
 
