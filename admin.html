@@ -62,7 +62,7 @@
 
                     <div class="form__input-field">
                         <label class="form__input-field_label" for="description">Short description</label>
-                        <input class="form__input-field_input" type="text" name="description" id="description" placeholder="Please, enter any description" value="">
+                        <input class="form__input-field_input" type="text" name="subtitle" id="description" placeholder="Please, enter any description" value="">
                         <h3 id="description-error" class="form__input-field_label-bottom-error">Description is required.</h3>
                     </div>
 
@@ -80,7 +80,7 @@
                                 <img id="author-to-delete" src="images/icon-camera.svg">
                             </div>
 
-                            <input class="form__input_file-input" type="file" id="author-photo" name="author-photo" accept=".jpeg, .png, .gif">
+                            <input class="form__input_file-input" type="file" id="author-photo" name="author-photo" accept=".jpeg, .png, .gif" value="">
                             <label id="upload-to-delete" class="form__input-field_file-label" for="author-photo">Upload</label>
                             <div id="delete-photo" class="input-field__delete-block_camera">
 
@@ -107,7 +107,7 @@
 
                     <div class="form__input-field">
                         <label class="form__input-field_label" for="big-image">Hero Image</label>
-                            <div id="big-photo-main" class="form__input-field_big-photo">
+                            <div id="big-photo-main" class="form__input-field_big-photo" value="">
                                 <input class="form__input_file-input" type="file" id="big-image" name="big-image" accept=".jpeg, .png, .gif">
                                 <label class="form__input-field_file-label" for="big-image" id="big-image-label">
 
@@ -147,7 +147,7 @@
                                 Upload
                             </label>
                         </div>
-                        <h3 id="small-photo-desc" class="form__input-field_label-bottom">Size up to 5mb. Format: png, jpeg, gif.</h3>
+                        <h3 id="small-photo-desc" class="form__input-field_label-bottom" value="">Size up to 5mb. Format: png, jpeg, gif.</h3>
                         <div id="delete-small-photo" class="input-field__delete-block">
 
                             <label class="delete-block_new-label" for="small-image">
@@ -212,7 +212,7 @@
             <h2 class="header2">Content</h2>
             <form id="content-form">
                 <label class="label-text" for="post-content">Post content (plain text)</label>
-                <textarea class="content__textarea" id="post-content" name="content" cols="100" rows="6" placeholder="Type anything you want..."></textarea>
+                <textarea class="content__textarea" id="post-content" name="content" cols="110" rows="6" placeholder="Type anything you want..."></textarea>
             </form>
         </div>
     </div>

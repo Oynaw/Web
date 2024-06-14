@@ -51,22 +51,25 @@ $method = $_SERVER['REQUEST_METHOD'];
 
 $conn = createDBConnection();
 
-if ($method == "POST"){
-$dataAsJson = file_get_contents("php://input");
-$dataAsArray = json_decode($dataAsJson, true);
-$image_url = saveImage($dataAsArray['image_url'], $dataAsArray['title']);
+if ($method == "POST") {
+	$dataAsJson = file_get_contents("php://input");
+	$dataAsArray = json_decode($dataAsJson, true);
+	$author_url = saveImage($dataAsArray['author_url'], $dataAsArray['author']);
+	$image_url = saveImage($dataAsArray['image_url'], $dataAsArray['title']);
 
     $sql = "INSERT INTO post (title, subtitle, content, author, author_url, image_url, publish_date, 
-tag_type, tag_text, featured) VALUES ('{$dataAsArray['title']}', '{$dataAsArray['subtitle']}', 
-'{$dataAsArray['content']}', '{$dataAsArray['author']}', 'images/{$dataAsArray['author_url']}', '{$image_url}', 
-'{$dataAsArray['publish_date']}', '{$dataAsArray['tag_type']}', '{$dataAsArray['tag_text']}', 
-{$dataAsArray['featured']})";
-print_r($sql);
+	tag_type, tag_text, featured) VALUES ('{$dataAsArray['title']}', '{$dataAsArray['subtitle']}', 
+	'{$dataAsArray['content']}', '{$dataAsArray['author']}', '{$author_url}', '{$image_url}', 
+	'{$dataAsArray['publish_date']}', '{$dataAsArray['tag_type']}', '{$dataAsArray['tag_text']}', 
+	{$dataAsArray['featured']})";
     if ($conn->query($sql) === TRUE) {
         echo "New record created successfully";
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
+}
+else {
+    echo "Uncorrect request method, use POST instead " . $method;
 }
 
 closeDBConnection($conn);

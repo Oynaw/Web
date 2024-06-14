@@ -1,14 +1,14 @@
-<div class="card" style="background-image: url(<?=$post['image_url'] ?>);">
-    <div class="tag tag-<?=$post['tag_type'] ?>">
-        <p class="tag_text"><?=$post['tag_text'] ?></p>
+<div class="featured-post" style="background-image: url(<?=$post['image_url'] ?>);">
+    <div class="tag tag_<?=$post['tag_type'] ?>">
+        <p class="tag__text"><?=$post['tag_text'] ?></p>
     </div>
-    <div class="card-text">
-        <a class="card-title" href='/post.php?id=<?= $post['post_id'] ?>'><?=$post['title'] ?></a>
-        <p class="card-description"><?=$post['subtitle'] ?></p>
-        <div class="card-context context">
+    <div class="featured-post__text">
+        <a class="featured-post__title" href='/post?id=<?= $post['post_id'] ?>'><?=$post['title'] ?></a>
+        <p class="featured-post__subtitle"><?=$post['subtitle'] ?></p>
+        <div class="featured-post__context">
             <img class="avatar" src=<?=$post['author_url'] ?> alt="img">
-            <p class="context_author"><?=$post['author'] ?></p>
+            <p class="contetxt__author"><?=$post['author'] ?></p>
         </div>
-        <p class="card-data"><?=date('F j,Y', strtotime($post['publish_date']))?></p>
+        <p class="featured-post__date"><?=date('F j,Y', strtotime($post['publish_date']))?></p>
     </div>
 </div>

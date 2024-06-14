@@ -13,9 +13,9 @@ const FormDatas = {
   "author_url": '',
   "publish_date": '',
   "image_url": '',
-  "featured": '',
+  "featured": 0,
   "tag_type": '',
-  "tag_text": '',
+  "tag_text": ''
 }
 
 titleInput.addEventListener('change', () => CopyText(titleInput, 'article-title-copy'));
@@ -28,20 +28,20 @@ authorNameInput.addEventListener('change', () => CopyText(authorNameInput, 'auth
 
 dateInput.addEventListener('change', () => CopyDate(dateInput, 'post-card-date-copy'));
 
-bigImageInput.addEventListener('change', () => copyImage(bigImageInput, 'preview-big'));
-bigImageInput.addEventListener('change', () => copyImage(bigImageInput, 'big-photo-main'));
+bigImageInput.addEventListener('change', () => copyImage(bigImageInput, 'preview-big', ''));
+bigImageInput.addEventListener('change', () => copyImage(bigImageInput, 'big-photo-main', ''));
 bigImageInput.addEventListener('change', () => UpdateArticlePreview());
 
-smallImageInput.addEventListener('change', () => copyImage(smallImageInput, 'post-card-preview'));
-smallImageInput.addEventListener('change', () => copyImage(smallImageInput, 'small-photo-main'));
+smallImageInput.addEventListener('change', () => copyImage(smallImageInput, 'post-card-preview', ''));
+smallImageInput.addEventListener('change', () => copyImage(smallImageInput, 'small-photo-main', 'image_url'));
 smallImageInput.addEventListener('change', () => UpdatePostCardPreview());
 
 
-authorImageInput.addEventListener('change', () => copyImage(authorImageInput, 'author-preview-photo'));
-authorImageInput.addEventListener('change', () => copyImage(authorImageInput, 'author-photo-main'));
+authorImageInput.addEventListener('change', () => copyImage(authorImageInput, 'author-preview-photo', ''));
+authorImageInput.addEventListener('change', () => copyImage(authorImageInput, 'author-photo-main', 'author_url'));
 authorImageInput.addEventListener('change', () => UpdateAuthorImage());
 
-function copyImage(from, to) {
+function copyImage(from, to, toList) {
     const file = from.files[0];
     if (file) {
         const reader = new FileReader();
@@ -50,6 +50,9 @@ function copyImage(from, to) {
         reader.onload = function (e) {
             const imageUrl = e.target.result;
             imageContainer.style.backgroundImage = `url(${imageUrl})`;
+			if (toList != ''){
+				FormDatas[toList] = imageUrl;
+			}
         };
 
         reader.readAsDataURL(file);
@@ -174,10 +177,11 @@ function RemoveAuthorImage() {
 
 function ValidateForm() {
     const form = document.getElementById('main-form');
-    let isEmpty = false;
-
+    var isEmpty = false;
+	console.log(form);
     for (let i = 0; i < form.elements.length; i++) {
         const element = form.elements[i];
+		console.log(element);
         if (element.value === '') {
             isEmpty = true;
             element.classList.remove('form__input-field_input');
@@ -202,22 +206,31 @@ function ValidateForm() {
         errBlock.style.display = 'none';
         succBlock.style.display = 'flex';
         displayFormData('main-form');
-        displayFormData('content-form');
     }
 }
 
-function displayFormData(form) {
-    const formData = new FormData(document.getElementById(form));
+async function displayFormData(form) {
+    var formData = new FormData(document.getElementById(form));
+	var element = document.getElementById('content-form').elements[0];
+	formData.append('content', element.value);
     for (const [key, value] of formData.entries()) {
         if (value instanceof File) {
             readAndDisplayFile(value);
         } else {
-            FormDatas[key] = value;
-            
+            FormDatas[key] = value;         
         }
     }
-    console.log(FormDatas) 
+    console.log(FormDatas);
+	console.log(JSON.stringify(FormDatas));
+	var url = "http://localhost:8001/api.php";
+	for (var i = 0; i < 1; i++) {
+		response = await fetch(url, {
+			method: "POST",
+		body: JSON.stringify(FormDatas)})
+	}
 }
+
+
 
 function readAndDisplayFile(file) {
     const reader = new FileReader();
@@ -225,5 +238,4 @@ function readAndDisplayFile(file) {
         console.log(`${file.name}: ${e.target.result}`);
     };
     reader.readAsDataURL(file);
-
 }
