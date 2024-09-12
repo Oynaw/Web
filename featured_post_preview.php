@@ -7,7 +7,7 @@
         <p class="featured-post__subtitle"><?=$post['subtitle'] ?></p>
         <div class="featured-post__context">
             <img class="avatar" src=<?=$post['author_url'] ?> alt="img">
-            <p class="contetxt__author"><?=$post['author'] ?></p>
+            <p class="context__author"><?=$post['author'] ?></p>
         </div>
         <p class="featured-post__date"><?=date('F j,Y', strtotime($post['publish_date']))?></p>
     </div>

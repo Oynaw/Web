@@ -177,7 +177,7 @@ body {
 .featured-post {
     width: 92%;
     height: 280px;
-	margin: 10px;
+	margin: auto;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -251,13 +251,15 @@ body {
     width: 100%;
     margin-top: 10px;
 }
+
 .recent-post {
     background: #FFFFFF;
     width: 296px;
     box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.09);
     border-radius: 3px;
-    margin-bottom: 25px;
     width: 92%;
+    margin: auto;
+    margin-bottom: 25px;
     height: 291px;
 
 }
@@ -297,10 +299,12 @@ body {
 }
 
 .recent-post__footer {
+    width: 95%;
+    margin: auto;
     display: flex;
     padding-top: 8px;
     padding-bottom: 8px;
-    justify-content: space-evenly;
+    justify-content:space-between;
     height: 30px;
     background: #FcFcFc;
     border-radius: 0px;

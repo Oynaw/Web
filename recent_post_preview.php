@@ -7,7 +7,7 @@
         </div>
         <div class="recent-post__footer">
             <div class="recent-post__context">
-                <img src=<?= $post['author_url'] ?> alt="img">
+                <img class="avatar" src=<?= $post['author_url'] ?> alt="img">
                 <p class="context__author"><?= $post['author'] ?></p>
             </div>
             <h4 class="recent-post___date"><?=date('n/j/Y', strtotime($post['publish_date']))?></h4>
